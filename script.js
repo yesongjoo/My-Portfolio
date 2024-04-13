@@ -82,6 +82,21 @@ allLinks.forEach(function (link) {
   });
 });
 
+// ////////////////////////////////////////////////////
+// Project hover
+
+const ProjectImgWrap = document.querySelectorAll(".project-img-wrap");
+const forHover = document.querySelectorAll(".for-hover");
+
+ProjectImgWrap.forEach(function (element) {
+  element.addEventListener("mouseover", function () {
+    this.querySelector(".for-hover").classList.add("show-hover");
+  });
+
+  element.addEventListener("mouseout", function () {
+    this.querySelector(".for-hover").classList.remove("show-hover");
+  });
+});
 ///////////////////////////////////////////////////////////
 // set current year
 const yearEl = document.querySelector(".year");
